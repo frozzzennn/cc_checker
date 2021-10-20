@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import requests
 from time import sleep
 from random import choice
@@ -162,7 +164,7 @@ def start_message(message):
             cc = cc.split("|")
             a = wink(cc[0], cc[1], cc[2], cc[3])
             if a == "Not":
-                print("Отправлено")
+                print("Отпралено")
             else:
                 bot.send_message(message.chat.id, a)
             count += 1
