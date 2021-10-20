@@ -110,7 +110,7 @@ def getBind(card, mm, yy, cvc):
             },
             "cardCvc": str(cvc),
             "cardExpMonth": mm,
-            "cardExpYear": int(f"20{yy}"),
+            "cardExpYear": int("20" + yy),
             "cardHolder": "MARAT NEDOGIMOV",
             "cardNumber": str(card),
             "reqId": data["req_id"],
@@ -157,7 +157,8 @@ def start_message(message):
         print(cc_list)
         bot.send_message(message.chat.id, "карты приняты в обработку")
         count = 0
-        for cc in cc_list: 
+        for cc in cc_list:
+ 
             cc = cc.split("|")
             a = wink(cc[0], cc[1], cc[2], cc[3])
             if a == "Not":
